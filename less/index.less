@@ -4,6 +4,8 @@
    License: none (public domain)
 */
 
+@import "background";
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,11 +67,11 @@ html, body {
 @dk: #333;
 @bk: #000;
 
-.dark-gradient {
+.dark-gradient() {
 	background: linear-gradient(@dk, @bk);
 }
 
-.red-gradient {
+.red-gradient() {
 	background: linear-gradient(tomato, crimson);
 }
 
