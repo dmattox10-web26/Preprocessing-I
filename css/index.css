@@ -173,6 +173,11 @@ h2 {
   color: #fff;
   margin: 1rem;
 }
+h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin: 1rem;
+}
 hr {
   color: #fff;
   margin: 1rem;
@@ -219,7 +224,7 @@ p {
 }
 section {
   border: 3px solid orange;
-  margin: 5rem 2rem 0 2rem;
+  margin: 4.5rem 2rem 1rem 2rem;
   border: 0.1rem solid #999;
   border-radius: 2.5rem;
   display: flex;
@@ -299,4 +304,83 @@ section .twins .stuff .bordered ul {
 section .twins .stuff .bordered ul li {
   border: 1px solid #999;
   padding: 1.5rem;
+}
+section .table {
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+section .table .th {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem;
+}
+section .table .th .years {
+  padding: 0.25rem;
+  width: 10%;
+}
+section .table .th .company {
+  padding: 0.25rem;
+  width: 20%;
+}
+section .table .th .title {
+  padding: 0.25rem;
+  width: 40%;
+}
+section .table .th .tech {
+  padding: 0.25rem;
+  width: 30%;
+}
+section .table .tt {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem;
+}
+section .table .tt .years {
+  padding: 0.25rem;
+  width: 10%;
+}
+section .table .tt .company {
+  padding: 0.25rem;
+  width: 20%;
+}
+section .table .tt .title {
+  padding: 0.25rem;
+  width: 40%;
+}
+section .table .tt .tech {
+  padding: 0.25rem;
+  width: 30%;
+}
+section .table .ti {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem;
+}
+section .table .ti .years {
+  padding: 0.25rem;
+  width: 10%;
+}
+section .table .ti .company {
+  padding: 0.25rem;
+  width: 20%;
+}
+section .table .ti .title {
+  padding: 0.25rem;
+  width: 40%;
+}
+section .table .ti .tech {
+  padding: 0.25rem;
+  width: 30%;
+}
+footer {
+  margin-top: 2rem;
+  display: flex;
+  background-color: #333;
+  background: linear-gradient(#333, #000);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
 }
