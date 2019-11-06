@@ -22,7 +22,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -66,6 +66,9 @@ html, body {
 
 @dk: #333;
 @bk: #000;
+@lt: #999;
+
+@width: 700px; // Change me to 500 to submit, due to safari problem
 
 .dark-gradient() {
 	background: linear-gradient(@dk, @bk);
@@ -79,20 +82,29 @@ html, body {
     display: flex;
     background-color: #333;
     .dark-gradient();
-    overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
     justify-content: center;
 
+    @media (max-width: @width) {
+        flex-direction: column;
+    }
+
     a{
-        color: #999;
+        color: @lt;
         text-align: center;
-        padding: 14px 16px;
+        padding: 1rem 1.6rem;
         text-decoration: none;
-        font-size: 17px;
-        border-top: 4px solid #333;
-        width: 200px;
+        font-size: 1.4rem;
+        width: 20rem;
+
+        @media (max-width: @width) {
+            padding: 1%;
+            font-size: 1.7rem;
+            width: 100%;
+            border-top: none;
+        }
     }
 
     a:hover {
@@ -101,4 +113,49 @@ html, body {
         color: black;
     }
 
+}
+
+section {
+    margin: 5rem 2rem 0 2rem;
+
+    .boxy {
+        border: .1rem solid @lt;
+        border-radius: 2.5rem;
+        .dark-gradient();
+        justify-content: flex-start;
+
+        @media (max-width: @width) {
+            flex-direction: column;
+        }
+
+        .profile {
+            max-width: 40%;
+            height: auto;
+            border-radius: 2.5rem;
+            @media (max-width: @width) {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        div {
+            width: 100%
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: @lt;
+            margin: 0.25rem;
+        }
+    }
+
+    @media (max-width: @width) {
+        margin: 12rem 1rem 0 1rem;
+    }
+    .twins {
+
+    }
+    .table {
+
+    }
 }
