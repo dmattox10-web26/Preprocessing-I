@@ -62,3 +62,41 @@ html, body {
     height: 100%;
 }
 
+@dk: #333;
+@bk: #000;
+
+.dark-gradient {
+	background: linear-gradient(@dk, @bk);
+}
+
+.red-gradient {
+	background: linear-gradient(tomato, crimson);
+}
+
+.navbar {
+    display: flex;
+    background-color: #333;
+    .dark-gradient();
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+
+    a{
+        color: #999;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        border-top: 4px solid #333;
+        width: 200px;
+    }
+
+    a:hover {
+        background-color: tomato;
+        .red-gradient();
+        color: black;
+    }
+
+}
