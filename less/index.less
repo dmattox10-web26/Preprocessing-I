@@ -6,6 +6,12 @@
 
 @import "background";
 
+@dk: #333;
+@bk: #000;
+@lt: #999;
+@wt: #fff;
+
+@width: 700px; // Change me to 500 to submit, due to safari problem
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,13 +68,8 @@ table {
 
 html, body {
     height: 100%;
+    color: @lt;
 }
-
-@dk: #333;
-@bk: #000;
-@lt: #999;
-
-@width: 700px; // Change me to 500 to submit, due to safari problem
 
 .dark-gradient() {
 	background: linear-gradient(@dk, @bk);
@@ -76,6 +77,11 @@ html, body {
 
 .red-gradient() {
 	background: linear-gradient(tomato, crimson);
+}
+
+.headings() {
+    color: @wt;
+    margin: 0.25rem;
 }
 
 .navbar {
@@ -144,8 +150,16 @@ section {
 
         h1 {
             font-size: 5rem;
-            color: @lt;
-            margin: 0.25rem;
+            .headings();
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            .headings();
+        }
+
+        hr {
+            .headings();
         }
     }
 

@@ -158,6 +158,7 @@ table {
 html,
 body {
   height: 100%;
+  color: #999;
 }
 .navbar {
   display: flex;
@@ -224,7 +225,16 @@ section .boxy div {
 }
 section .boxy h1 {
   font-size: 5rem;
-  color: #999;
+  color: #fff;
+  margin: 0.25rem;
+}
+section .boxy h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0.25rem;
+}
+section .boxy hr {
+  color: #fff;
   margin: 0.25rem;
 }
 @media (max-width: 700px) {
