@@ -160,6 +160,28 @@ body {
   height: 100%;
   color: #999;
 }
+div {
+  border: 1px solid yellow;
+}
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin: 1rem;
+}
+h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 1rem;
+}
+hr {
+  color: #fff;
+  margin: 1rem;
+}
+p {
+  color: #fff;
+  margin: 1rem;
+  color: #999;
+}
 .navbar {
   display: flex;
   background-color: #333;
@@ -196,13 +218,20 @@ body {
   color: black;
 }
 section {
+  border: 3px solid orange;
   margin: 5rem 2rem 0 2rem;
-}
-section .boxy {
   border: 0.1rem solid #999;
   border-radius: 2.5rem;
+  display: flex;
   background: linear-gradient(#333, #000);
-  justify-content: flex-start;
+}
+@media (max-width: 700px) {
+  section {
+    flex-direction: column;
+  }
+}
+section .boxy {
+  display: flex;
 }
 @media (max-width: 700px) {
   section .boxy {
@@ -210,35 +239,64 @@ section .boxy {
   }
 }
 section .boxy .profile {
-  max-width: 40%;
+  max-width: 50%;
   height: auto;
-  border-radius: 2.5rem;
+  border-radius: 2.5rem 0 0 2.5rem;
 }
 @media (max-width: 700px) {
   section .boxy .profile {
     max-width: 100%;
     height: auto;
+    border-radius: 2.5rem;
   }
 }
 section .boxy div {
   width: 100%;
+  justify-content: center;
 }
-section .boxy h1 {
-  font-size: 5rem;
-  color: #fff;
-  margin: 0.25rem;
+section .boxy div .button-container {
+  display: flex;
 }
-section .boxy h2 {
-  font-size: 2.5rem;
-  color: #fff;
-  margin: 0.25rem;
-}
-section .boxy hr {
-  color: #fff;
-  margin: 0.25rem;
+section .boxy div .button-container a {
+  text-decoration: none;
+  color: #000;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  background: linear-gradient(tomato, crimson);
+  justify-content: center;
+  font-size: 1.5rem;
 }
 @media (max-width: 700px) {
   section {
     margin: 12rem 1rem 0 1rem;
   }
+}
+section .twins {
+  width: 50%;
+}
+@media (max-width: 700px) {
+  section .twins {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+section .twins div {
+  justify-content: center;
+}
+section .twins .stuff {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+section .twins .stuff .bordered {
+  display: flex;
+}
+section .twins .stuff .bordered ul {
+  margin: 0.5rem 0;
+}
+section .twins .stuff .bordered ul li {
+  border: 1px solid #999;
+  padding: 1.5rem;
 }
