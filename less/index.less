@@ -4,6 +4,14 @@
    License: none (public domain)
 */
 
+@import "background";
+
+@dk: #333;
+@bk: #000;
+@lt: #999;
+@wt: #fff;
+
+@width: 700px; // Change me to 500 to submit, due to safari problem
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,7 +28,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -31,6 +39,11 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 ol, ul {
 	list-style: none;
@@ -55,5 +68,225 @@ table {
 
 html, body {
     height: 100%;
+    color: @lt;
 }
 
+.dark-gradient() {
+	background: linear-gradient(@dk, @bk);
+}
+
+.red-gradient() {
+	background: linear-gradient(tomato, crimson);
+}
+
+.red-backwards() {
+    background: linear-gradient(crimson, tomato);
+}
+
+.headings() {
+    color: @wt;
+    margin: 1rem;
+}
+
+.tables() {
+    display: flex;
+    padding: .5rem;
+    .years {
+        padding: .25rem;
+        width: 10%;
+    }
+    
+    .company {
+        padding: .25rem;
+        width: 20%;
+    }
+    
+    .title {
+        padding: .25rem;
+        width: 40%;
+    }
+    
+    .tech {
+        padding: .25rem;
+        width: 30%;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    .headings();
+}
+
+h2 {
+    font-size: 2rem;
+    .headings();
+}
+
+h3 {
+    font-size: 1.25rem;
+    .headings();
+}
+
+hr {
+    .headings();
+}
+
+p {
+    .headings();
+    color: @lt;
+}
+
+.navbar {
+    display: flex;
+    background-color: #333;
+    .dark-gradient();
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+
+    @media (max-width: @width) {
+        flex-direction: column;
+    }
+
+    a{
+        color: @lt;
+        text-align: center;
+        padding: 1rem 1.6rem;
+        text-decoration: none;
+        font-size: 1.4rem;
+        width: 20rem;
+
+        @media (max-width: @width) {
+            padding: 1%;
+            font-size: 1.7rem;
+            width: 100%;
+            border-top: none;
+        }
+    }
+
+    a:hover {
+        background-color: tomato;
+        .red-gradient();
+        color: black;
+    }
+
+}
+
+section {
+    margin: 4.5rem 2rem 1rem 2rem;
+    border: .1rem solid @lt;
+    border-radius: 2.5rem;
+    display: flex;
+    .dark-gradient();
+    
+    @media (max-width: @width) {
+        flex-direction: column;
+    }
+
+    .boxy {
+        display: flex;
+        @media (max-width: @width) {
+            flex-direction: column;
+        }
+        .profile {
+            max-width: 50%;
+            height: auto;
+            border-radius: 2.5rem 0 0 2.5rem;           
+            @media (max-width: @width) {
+                max-width: 100%;
+                height: auto;
+                border-radius: 2.5rem;
+            }
+        }
+
+        div {
+            width: 100%;
+            justify-content: center;
+
+            .button-container {
+                display: flex;
+
+                a {
+                    text-decoration: none;
+                    color: @bk;
+                    margin: 1rem 0;
+                    padding: 1rem 2rem;
+                    border: 1px solid transparent;
+                    border-radius: 25px;
+                    .red-gradient();
+                    justify-content: center;
+                    font-size: 1.5rem;
+
+                    
+                }
+            }
+        }
+    }
+
+    @media (max-width: @width) {
+        margin: 12rem 1rem 0 1rem;
+    }
+    
+    .twins {
+        width: 50%;
+        
+        @media (max-width: @width) {
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        div {
+            
+            justify-content: center;
+        }
+        .stuff {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .bordered {
+                display: flex;
+
+                ul {
+                    margin: .5rem 0;
+                    li {
+                        border: 1px solid @lt;
+                        padding: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .table {
+        padding: 1rem;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        .th {
+            width: 100%;
+            .tables();
+        }
+
+        .tt {
+            width: 100%;
+            .tables();
+        }
+
+        .ti {
+            width: 100%;
+            .tables();
+        }
+    }
+}
+
+footer {
+    margin-top: 2rem;
+    display: flex;
+    background-color: #333;
+    .dark-gradient();
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+}
